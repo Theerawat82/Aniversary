@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary!</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Mitr:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Hearts -->
+    <canvas id="heartCanvas"></canvas>
+
+    <!-- Music Player Controls -->
+    <div class="music-controls">
+        <button id="musicToggle">
+            <span id="musicIcon">🎵</span>
+            <span>เล่นเพลง / หยุด</span>
+        </button>
+        <!-- We use an embedded audio source -->
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Main Container -->
+    <main class="app-container">
+        
+        <!-- Page 1: Anniversary Card -->
+        <section id="page1" class="page active">
+            <div class="glass-card">
+                <h1 class="title">สุขสันต์ครบรอบ 1 ปี</h1>
+                <h2 class="subtitle">ไอหมูตูดของเค้า 🐷💕</h2>
+                
+                <div class="image-container">
+                    <img src="assets/cute_chibi_couple.png" alt="Cute Couple" class="couple-img">
+                </div>
+                
+                <p class="message">
+                    "Us" — my favorite chapter.<br><br>
+                    ทุกช่วงเวลา ทุกรอยยิ้ม ทุกเรื่องราวที่ผ่านมากับเธอ<br>คือสิ่งที่ดีที่สุดในชีวิตเค้าเลยนะ
+                </p>
+
+                <button id="nextBtn" class="glow-button">ONE FINAL THOUGHT...</button>
+            </div>
+        </section>
+
+        <!-- Page 2: Love Confession -->
+        <section id="page2" class="page">
+            <div class="glass-card">
+                <h1 class="title large-title">รักมุหมูน่ะ ❤️</h1>
+                
+                <div class="image-container">
+                    <img src="assets/chibi_couple_love.png" alt="Couple Hugging" class="couple-img">
+                </div>
+                
+                <div class="letter-container">
+                    <div class="envelope" id="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-text">กดเพื่อเปิดจดหมาย 💌</div>
+                    </div>
+                    <div class="letter-content" id="letterContent">
+                        <!-- Typewriter text will go here -->
+                        <p id="typedText"></p>
+                    </div>
+                </div>
+
+                <button id="backBtn" class="text-button">กลับไปหน้าแรก</button>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
